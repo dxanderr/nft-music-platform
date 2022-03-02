@@ -15,7 +15,7 @@
 
 .top-left-blur{
     position: absolute;
-    z-index: -1;
+    /* z-index: -1; */
     top: -650px;
     left: -600px;
     height: 1352px;
@@ -44,6 +44,12 @@ nav{
 nav p{
     margin: 0 16px;
     color: white;
+}
+
+.social--links img{
+    height: 20px;
+    margin: 0 10px;
+    fill: white;
 }
 
 @media screen and (min-width: 768px){
