@@ -39,7 +39,6 @@ export default function Banner(){
                 <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
                 <img src={Globe} alt="globe" className="globe"/>
             </div>
-
         </BannerStyled>
     )
 }

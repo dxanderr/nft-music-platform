@@ -4,6 +4,7 @@ import ellipse from './images/ellipse.png'
 import Hero from './components/Hero'
 import Banner from './components/Banner'
 import Info from './components/Info'
+import Guide from './components/Guide'
 export default function App(){
     return(        
         <div className="home--container">
@@ -13,6 +14,7 @@ export default function App(){
             <Hero />
             <Banner />
             <Info />
+            <Guide />
         </div>
     )
 }
