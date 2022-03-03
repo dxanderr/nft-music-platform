@@ -4,12 +4,12 @@
     box-sizing: border-box;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .home--container{
     position: relative;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: #020106;
 }
@@ -25,9 +25,10 @@
 .bottom-right-blur{
     position: absolute;
     /* z-index: -1; */
-    bottom: 0;
-    right: 0px;
-    height: 800px;
+    bottom: 200px;
+    right: -600px;
+    /* transform: rotate(0deg); */
+    height: 1300px;
 }
 
 

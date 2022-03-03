@@ -53,7 +53,7 @@ h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .solana--logo{
@@ -61,10 +61,9 @@ h3{
     height: 30px;
 }
 
-.discover--more{
-    height: 30px;
+button{
     margin-right: 20px;
-    padding: 18px 40px;
+    padding: 6px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,6 +71,10 @@ h3{
     background: none;
     border-radius: 20px;
     border: solid 1px #C4C4C4;
+
+    &:hover{
+        background: #000;
+    }
 }
 
 .right-arrow{
@@ -90,7 +93,7 @@ h3{
         font-size: 40px;
     }
     
-    .hero--text{
+    .hero--text{  
         max-width: 60%;
     }
     

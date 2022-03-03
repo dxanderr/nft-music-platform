@@ -2,6 +2,8 @@ import Header from './components/Header'
 import topLeft from './images/top-left.png'
 import ellipse from './images/ellipse.png'
 import Hero from './components/Hero'
+import Banner from './components/Banner'
+import Info from './components/Info'
 export default function App(){
     return(        
         <div className="home--container">
@@ -9,6 +11,8 @@ export default function App(){
             <img src={ellipse} className="bottom-right-blur" alt="bg-blur"/>
             <Header />
             <Hero />
+            <Banner />
+            <Info />
         </div>
     )
 }
