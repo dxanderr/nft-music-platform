@@ -1,20 +1,14 @@
-import Header from './components/Header'
-import topLeft from './images/top-left.png'
-import ellipse from './images/ellipse.png'
-import Hero from './components/Hero'
-import Banner from './components/Banner'
-import Info from './components/Info'
-import Guide from './components/Guide'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+
 export default function App(){
     return(        
-        <div className="home--container">
-            <img src={topLeft} className="top-left-blur" alt="bg-blur"/>
-            <img src={ellipse} className="bottom-right-blur" alt="bg-blur"/>
-            <Header />
-            <Hero />
-            <Banner />
-            <Info />
-            <Guide />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" exact element={<Home />} />
+                <Route path="/about" exact element={<About />} />
+            </Routes>
+        </Router>
     )
 }

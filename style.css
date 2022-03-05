@@ -7,28 +7,4 @@
     overflow-x: hidden;
 }
 
-.home--container{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background: #020106;
-}
-
-.top-left-blur{
-    position: absolute;
-    /* z-index: -1; */
-    top: -650px;
-    left: -600px;
-    height: 1352px;
-}
-
-.bottom-right-blur{
-    position: absolute;
-    /* z-index: -1; */
-    top: 800px;
-    right: -600px;
-    /* transform: rotate(0deg); */
-    height: 1300px;
-}
-
 

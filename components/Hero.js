@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { Suspense } from 'react'
-import { OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import Box from './Box'
+// import { Suspense } from 'react'
+// import { OrbitControls } from '@react-three/drei'
+// import { Canvas } from '@react-three/fiber'
+// import Box from './Box'
 import Solana from '../images/solana.svg'
 import RightArrow from '../images/carret_right.svg'
 
@@ -27,14 +27,14 @@ export default function Hero(){
                 </section>
             </div>
             <div className="right--column">
-                <Canvas className="canvas">
+                {/* <Canvas className="canvas">
                     <OrbitControls enableZoom={false} />
                     <ambientLight intensity={0.5} />
                     <directionalLight position={[-2, 5, 2]} intensity={1} />
                     <Suspense fallback={null}>
                         <Box />
                     </Suspense>
-                </Canvas>
+                </Canvas> */}
             </div>
         </HeroStyled>
     )
@@ -42,11 +42,7 @@ export default function Hero(){
 
 const HeroStyled = styled.div`
 
-padding-top: 120px;  
-margin: 0 40px;
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-
+    padding-top: 120px 40px 0 40px;  
 /* right column with 3D image is removed on mobile */
     .right--column{
         display: none;
