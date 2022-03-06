@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Header from '../Header'
+import Nav from '../Nav'
 import Hero from '../Hero'
 import Banner from '../Banner'
 import Info from '../Info'
@@ -11,7 +11,7 @@ import '../../style.css'
 export default function Home(){
     return (
         <HomeStyled>
-            <Header />
+            <Nav />
             <img src={topLeft} className="top-left-blur" alt="bg-blur" />
             <img src={ellipse} className="bottom-right-blur" alt="bg-blur" />
             <Hero />

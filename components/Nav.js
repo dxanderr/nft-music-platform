@@ -6,7 +6,6 @@ import { AiFillFacebook } from 'react-icons/ai'
 import { BsTwitter } from 'react-icons/bs'
 import { FaDiscord } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
-import { AiOutlineSearch } from 'react-icons/ai'
  
 export default function Header(){
     return(
@@ -115,7 +114,7 @@ const NavStyled = styled.div`
     }
 
     /* Tablet / Desktop Sizing */
-    @media screen and (min-width: 500px){
+    @media screen and (min-width: 768px){
         .social-links{
             display: flex;
         }
