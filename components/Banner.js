@@ -15,30 +15,7 @@ export default function Banner(){
                 <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
                 <img src={Globe} alt="globe" className="globe"/>
             </div>
-            <div className="cell">
-                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
-                <img src={Globe} alt="globe" className="globe"/>
-            </div>
-            <div className="cell">
-                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
-                <img src={Globe} alt="globe" className="globe"/>
-            </div>
-            <div className="cell">
-                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
-                <img src={Globe} alt="globe" className="globe"/>
-            </div>
-            <div className="cell">
-                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
-                <img src={Globe} alt="globe" className="globe"/>
-            </div>
-            <div className="cell">
-                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
-                <img src={Globe} alt="globe" className="globe"/>
-            </div>
-            <div className="cell">
-                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
-                <img src={Globe} alt="globe" className="globe"/>
-            </div>
+
         </BannerStyled>
     )
 }
@@ -49,7 +26,6 @@ const BannerStyled = styled.div`
 height: 60px;
 margin-top: 80px;
 display: flex;
-flex-wrap: clip;
 align-items:center;
 border-top: 1px solid white;
 border-bottom: 1px solid white;

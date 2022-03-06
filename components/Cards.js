@@ -28,7 +28,6 @@ const CardsStyled = styled.div`
         display: flex;
         flex-wrap: nowrap;
         gap: 20px;
-        overflow-x: scroll;
     }
 
     h3{
