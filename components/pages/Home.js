@@ -4,6 +4,7 @@ import Hero from '../Hero'
 import Banner from '../Banner'
 import Info from '../Info'
 import Guide from '../Guide'
+import Cards from '../Cards'
 import topLeft from '../../images/top-left.png'
 import spotlight from '../../images/ellipse.png'
 import '../../style.css'
@@ -19,6 +20,7 @@ export default function Home(){
             <Banner />
             <Info />
             <Guide />
+            <Cards />
         </HomeStyled>
     )
 }

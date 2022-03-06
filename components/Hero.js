@@ -41,7 +41,7 @@ export default function Hero(){
 }
 
 const HeroStyled = styled.div`
-    padding: 120px 40px 0 40px;  
+    padding: 120px 10% 0 10%;  
 
     .left--column{
         z-index: 2;
