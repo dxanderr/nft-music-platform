@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// components
 import Home from './components/pages/Home';
 import About from './components/pages/About';
+import "./style.css"
 
 export default function App(){
     return(        
@@ -12,3 +15,4 @@ export default function App(){
         </Router>
     )
 }
+

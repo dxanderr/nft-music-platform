@@ -5,15 +5,16 @@ import Banner from '../Banner'
 import Info from '../Info'
 import Guide from '../Guide'
 import topLeft from '../../images/top-left.png'
-import ellipse from '../../images/ellipse.png'
+import spotlight from '../../images/ellipse.png'
 import '../../style.css'
 
 export default function Home(){
     return (
         <HomeStyled>
+            <img src={topLeft} className="top-left-blur" alt="bg-image" />
+            <img src={spotlight} className="bottom-right-blur" alt="bg-image" />
+            <div className="nav-fog"></div>
             <Nav />
-            <img src={topLeft} className="top-left-blur" alt="bg-blur" />
-            <img src={ellipse} className="bottom-right-blur" alt="bg-blur" />
             <Hero />
             <Banner />
             <Info />
@@ -23,27 +24,24 @@ export default function Home(){
 }
 
 const HomeStyled = styled.div`
-
     position: relative;
     height: 100%;
     width: 100%;
     background: #020106;
+    z-index: 0;
 
     .top-left-blur{
         position: absolute;
-        /* z-index: -1; */
+        z-index: -1;
         top: -650px;
         left: -600px;
         height: 1352px;
-        z-index: -1;
     }
 
     .bottom-right-blur{
         position: absolute;
-        /* z-index: -1; */
         top: 800px;
         right: -600px;
-        /* transform: rotate(0deg); */
         height: 1300px;
         z-index: -1;
     }

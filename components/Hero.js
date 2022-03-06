@@ -41,114 +41,120 @@ export default function Hero(){
 }
 
 const HeroStyled = styled.div`
+    padding: 120px 40px 0 40px;  
 
-    padding-top: 120px 40px 0 40px;  
-/* right column with 3D image is removed on mobile */
+    .left--column{
+        z-index: 2;
+        display: block;          
+    }
+    /* right column with 3D image is removed on mobile */
     .right--column{
         display: none;
+        z-index: 1;
+    }
+    
+    h2,h3{
+        font-weight:400;
     }
 
-h2,h3{
-    font-weight:400;
-}
-
-h2{
-    font-size: 50px;
-}
-
-h3{
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-.hero--text{
-    line-height: 1.75rem;
-    margin-top: 60px;
-    color: #C4C4C4;
-}
-
-.hero--details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 60px;
-}
-
-.solana--logo{
-    margin-top: 6px;
-    height: 30px;
-}
-
-button{
-    margin-right: 20px;
-    padding: 6px 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #C4C4C4;
-    background: none;
-    border-radius: 20px;
-    border: solid 1px #C4C4C4;
-
-    &:hover{
-        background: #000;
+    h2{
+        font-size: 50px;
     }
-}
-
-.right-arrow{
-    height: 26px;
-}
-
-
-@media screen and (min-width: 500px){
-    .hero--text, .hero--details{
-        max-width: 90%;
-    }
-}
-
-@media screen and (min-width: 768px){
-    display: flex;
-    justify-content: space-between;
 
     h3{
-        font-size: 40px;
+        margin-top: 20px;
+        font-size: 30px;
     }
-    
-    .hero--text{  
-        max-width: 60%;
+
+    .hero--text{
+        line-height: 1.75rem;
+        margin-top: 60px;
+        color: #C4C4C4;
     }
-    
+
     .hero--details{
-        max-width: 60%;
-    }
-
-}
-
-@media screen and (min-width: 968px){
-    padding: 120px 10% 0 10%;
-    .left--column{
-        width: 50%;
-    }
-
-    .hero--text{  
-        max-width: 100%;
-    }
-    
-    .hero--details{
-        max-width: 100%;
-    }    
-    
-    .canvas{
-        height: 400px !important;
-        width: 400px !important;
-    }
-    
-    .right--column{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 60px;
     }
-}
-@media screen and (min-width: 1200px){
-    padding: 120px 10% 0 10%;
-}
+
+    .solana--logo{
+        margin-top: 6px;
+        height: 30px;
+    }
+
+    button{
+        margin-right: 20px;
+        padding: 6px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #C4C4C4;
+        background: none;
+        border-radius: 20px;
+        border: solid 1px #C4C4C4;
+
+        &:hover{
+            background: #000;
+        }
+    }
+
+    .right-arrow{
+        height: 26px;
+    }
+
+
+    @media screen and (min-width: 500px){
+        .hero--text, .hero--details{
+            max-width: 90%;
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        display: flex;
+        justify-content: space-between;
+        
+
+        h3{
+            font-size: 40px;
+        }
+        
+        .hero--text{  
+            max-width: 60%;
+        }
+        
+        .hero--details{
+            max-width: 60%;
+        }
+
+    }
+
+    @media screen and (min-width: 968px){
+        padding: 120px 10% 0 10%;
+        .left--column{
+            width: 50%;
+        }
+
+        .hero--text{  
+            max-width: 100%;
+        }
+        
+        .hero--details{
+            max-width: 100%;
+        }    
+        
+        .canvas{
+            height: 400px !important;
+            width: 400px !important;
+        }
+        
+        .right--column{
+            display: flex;
+        }
+    }
+    @media screen and (min-width: 1200px){
+        padding: 120px 10% 0 10%;
+    }
 
 `

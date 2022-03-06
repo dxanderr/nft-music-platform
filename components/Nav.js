@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import NavMenu from './NavMenu'
 
+
 // react-icons 
 import { AiFillFacebook } from 'react-icons/ai'
 import { BsTwitter } from 'react-icons/bs'
 import { FaDiscord } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
  
-export default function Header(){
+export default function Nav(){
     return(
         <NavStyled>
-
             {/* Logo */}
             <div className="logo">
                 <strong>Music</strong>
@@ -51,16 +51,17 @@ const NavStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 26px;
-    background: rgba(255, 255, 255, 0.116);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 0;
     
     nav{
         display: none;
+        z-index: 1;
     }
-
+    
     /* Logo */
     .logo{
         cursor: pointer;
+        z-index: 1;
         font-size: 12px;
     }
 
@@ -72,17 +73,18 @@ const NavStyled = styled.div`
         cursor: pointer;
 
         &:hover{
-            color: #2D9FF6;
+            color: #000;
         }
     }
 
     /* Search Field */
     .search-field{
         background: #DEDEDE;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
         padding: 5px 5px 5px 10px;
         width: 40%;
-        border-radius: 6px;
+        border-radius: 8px;
+        z-index: 1;
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #828282;
@@ -103,6 +105,7 @@ const NavStyled = styled.div`
     /* Social media icons */
     .social-links{
         display: none;
+        z-index: 1;
         svg{
             margin: 0 5px;
             cursor: pointer;

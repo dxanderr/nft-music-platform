@@ -122,6 +122,7 @@ export default NavMenu;
 
 const DropdownMenusStyled = styled.div`
     display: flex;
+    z-index: 1;
 
 
     /* <li> */
@@ -236,4 +237,7 @@ const DropdownMenusStyled = styled.div`
     transition: all var(--speed) ease;
     }
 
+    @media screen and (min-width: 1200px){
+        display: none;
+    }
 `
