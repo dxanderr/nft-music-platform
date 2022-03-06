@@ -50,7 +50,7 @@ const NavStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 26px;
+    padding: 0 10%;
     z-index: 0;
     
     nav{

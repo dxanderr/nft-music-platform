@@ -5,35 +5,35 @@ export default function Info(){
     return(
         <InfoStyled>
             <section className="first">
-                <div className="first--text">
+                <div className="text first--text">
                     <h3>How do Music NFTs work?</h3>
                     <p className="info--text">NFTs are unique assets stored and tradable on a blockchain. They are, immutable, scarce and publicly verifiable. In the music world, artists get to sell limited digital content to their fans who pay via crypto. You can now produce any music content that cannot be counterfeited.</p>
                 </div>
                 <img src={ellipse} alt="placeholder" className="placeholder" />
             </section>
             <section className="second">
-                <div className="second--text">
+                <div className="text second--text">
                     <h3>How do Music NFTs work?</h3>
                     <p className="info--text" >NFTs are unique assets stored and tradable on a blockchain. They are, immutable, scarce and publicly verifiable. In the music world, artists get to sell limited digital content to their fans who pay via crypto. You can now produce any music content that cannot be counterfeited.</p>
                 </div>
                 <img src={ellipse} alt="placeholder" className="placeholder" />
             </section>
-
         </InfoStyled>
     )
 }
 
 const InfoStyled = styled.div`
 
+    margin-top: 40px;
+
     section{
-
-        margin: 60px 40px 0 40px;
-
+        margin: 60px 0;
+        padding: 0 10%;
     }
 
     .placeholder{
         border: 1px solid grey;
-        width: 100%;
+        width:300px;
     }
 
     h3{
@@ -48,5 +48,18 @@ const InfoStyled = styled.div`
     }
 
 
+    @media screen and (min-width: 986px){
+        section{
+            display: flex;
+            max-width: 100%;
+        }
 
+        .text{
+            width: 60%;
+        }
+
+        .placeholder{
+            margin-left: 40px;
+        }
+    }
 `

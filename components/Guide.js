@@ -21,7 +21,8 @@ export default function Guide(){
 
 const GuideStyled = styled.div `
 
-    margin: 60px 40px;
+    margin-top: 60px;
+    padding: 0 10%;
 
     h4{
         font-size: 40px;
@@ -29,9 +30,13 @@ const GuideStyled = styled.div `
     }
 
     .statement--text{
-        margin: 40px 0;
+        margin: 40px 10px;
         line-height: 1.75rem;
         color: #C4C4C4;          
+    }
+
+    @media screen and (min-width: 768px){
+        display: flex;
     }
 
 `
