@@ -4,12 +4,19 @@ import Hero from '../Hero'
 import Banner from '../Banner'
 import Info from '../Info'
 import Guide from '../Guide'
-import Cards from '../Cards'
+import Data from '../../data'
+import Card from '../Card'
 import topLeft from '../../images/top-left.png'
 import spotlight from '../../images/ellipse.png'
 import '../../style.css'
 
 export default function Home(){
+    const cardObjects = Data.map(card => {
+        return <Card
+            key={card.id}
+            card={card}
+        />
+    })
     return (
         <HomeStyled>
             <img src={topLeft} className="top-left-blur" alt="bg-image" />
@@ -20,7 +27,9 @@ export default function Home(){
             <Banner />
             <Info />
             <Guide />
-            <Cards />
+            <section className="cards">
+                {cardObjects}
+            </section>
         </HomeStyled>
     )
 }
