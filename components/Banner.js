@@ -15,7 +15,34 @@ export default function Banner(){
                 <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
                 <img src={Globe} alt="globe" className="globe"/>
             </div>
-
+            <div className="cell">
+                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
+                <img src={Globe} alt="globe" className="globe"/>
+            </div>
+            <div className="cell">
+                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
+                <img src={Globe} alt="globe" className="globe"/>
+            </div>
+            <div className="cell">
+                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
+                <img src={Globe} alt="globe" className="globe"/>
+            </div>
+            <div className="cell">
+                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
+                <img src={Globe} alt="globe" className="globe"/>
+            </div>
+            <div className="cell">
+                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
+                <img src={Globe} alt="globe" className="globe"/>
+            </div>
+            <div className="cell">
+                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
+                <img src={Globe} alt="globe" className="globe"/>
+            </div>
+            <div className="cell">
+                <h2 className="banner">NEW WAY TO REACH THE FAN</h2>
+                <img src={Globe} alt="globe" className="globe"/>
+            </div>
         </BannerStyled>
     )
 }
