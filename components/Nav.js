@@ -73,7 +73,7 @@ const NavStyled = styled.div`
         cursor: pointer;
 
         &:hover{
-            color: #000;
+            color: #06F3FF;
         }
     }
 

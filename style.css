@@ -27,11 +27,25 @@
   z-index: 0;
 }
 
+.card-bg{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    height: 1400px;
+    opacity: 0.5;
+}
+
 /* Card Component Styles */
+.cards-title{
+  margin: 20px 0;
+  font-size: 50px;
+  font-weight: 400;
+  padding: 0 10%;
+}
 
 .cards {
-  height: 600px;
-  margin-top: 100px;
+  height: 520px;
+  margin: 100px 0;
   padding: 20px 10%;
   display: flex;
   flex-wrap: nowrap;
@@ -51,12 +65,14 @@
 
 .test{
   height: 100%;
-  border: solid lime 1px;
+  border-radius: 4px;
+  border: solid white 1px;
+  padding: 0 30px;
 }
 
 .image-container{
-  height: 300px;
-  width: 100%;
+  height: 250px;
+
 }
 
 .image {
@@ -65,28 +81,35 @@
   right: -8%;
   z-index: 10;
   height: 260px;
-  width: 280px;
+  width: 360px;
 }
 
 /* ADD */
-/* .card--title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-} */
-
-.card--stats {
-  padding-top: 40px;
-    display: flex;
-    align-items: center;
+.card--title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0;
 }
 
-.card--star {
-    height: 14px;
+.curr-logo {
+    height: 18px;
 }
 
 /* ADD */
 .card--price {
     margin-top: auto;
+}
+
+.price-container{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.coin-price{
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 
@@ -98,3 +121,33 @@
     padding: 5px 7px;
     font-weight: bold;
 }
+
+
+/* buttons */
+.buttons{
+  height: 60px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button{
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.play-now{
+  background: none;
+  border: solid white 1px;
+}
+
+.buy{
+  background: linear-gradient(90deg, #6D00FF, #2D9FF6, #06FFF0 );
+  border: none;
+}
+
+/* .buy:hover{
+
+} */

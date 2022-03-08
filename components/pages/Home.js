@@ -20,6 +20,7 @@ export default function Home(){
     return (
         <HomeStyled>
             <img src={topLeft} className="top-left-blur" alt="bg-image" />
+            <img src={topLeft} className="card-bg" alt="bg-image" />
             <img src={spotlight} className="bottom-right-blur" alt="bg-image" />
             <div className="nav-fog"></div>
             <Nav />
@@ -27,6 +28,7 @@ export default function Home(){
             <Banner />
             <Info />
             <Guide />
+            <h3 className="cards-title">Discover Music NFT</h3>
             <section className="cards">
                 {cardObjects}
             </section>

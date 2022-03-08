@@ -8,8 +8,7 @@ export default function Footer(){
     )
 }
 
-const FooterStyled = styled.div`
-
+const FooterStyled = styled.div`\
     height: 400px;
     background: #020106;
 `

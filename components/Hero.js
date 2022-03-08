@@ -86,7 +86,7 @@ const HeroStyled = styled.div`
 
     button{
         margin-right: 20px;
-        padding: 6px 40px;
+        padding: 6px 24px;
         display: flex;
         justify-content: center;
         align-items: center;
