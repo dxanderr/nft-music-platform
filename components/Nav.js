@@ -26,20 +26,22 @@ export default function Nav(){
             </nav>
 
             {/* Search Field */}
-            <input type="text" className="search-field" placeholder="search..">
+            {/* <input type="text" className="search-field" placeholder="search..">
             
-            </input>
+            </input> */}
             
-            {/* Social Media Links */}
-            <div className="social-links">
-                <AiFillFacebook />
-                <BsTwitter />
-                <FaDiscord />
-                <AiFillGithub />
-            </div>
+            <div className="group">
+                {/* Social Media Links */}
+                <div className="social-links">
+                    <AiFillFacebook />
+                    <BsTwitter />
+                    <FaDiscord />
+                    <AiFillGithub />
+                </div>
 
-            {/* Navigation Menu  */}
-            <NavMenu />
+                {/* Navigation Menu  */}
+                <NavMenu />
+            </div>
         </NavStyled>
     )
 }
@@ -100,10 +102,13 @@ const NavStyled = styled.div`
         }    
     }
 
-
+    .group{
+        display: flex;
+        align-items: center;
+    }
 
     /* Social media icons */
-    .social-links{
+    .social-links{ 
         display: none;
         z-index: 1;
         svg{
