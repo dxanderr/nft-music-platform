@@ -1,7 +1,7 @@
 import "../style.css"
 
 
-export default function Card(props){
+export default function Card(props) {
     let { title, price, coverImg, currImg, tokens } = props.card
     let badgeText
     return (

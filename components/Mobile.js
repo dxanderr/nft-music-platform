@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { Link as LinkScroll } from 'react-scroll';
-import { Link as LinkRoute } from 'react-scroll';
-import { FaTimes } from 'react-icons/fa'
+// import { Link as LinkRoute } from 'react-scroll';
+import { AiOutlineClose } from 'react-icons/ai'
 
 const MobileMenu = ({isOpen, toggle}) => {
+
     return (
         <MobileMenuContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
-                <CloseIcon />
+                <AiOutlineClose/>
             </Icon>
             <MobileMenuWrapper>
                 <Menu>
@@ -24,9 +25,6 @@ const MobileMenu = ({isOpen, toggle}) => {
                         FAQ
                     </MobileMenuLink>
                 </Menu>
-                <MobileMenuBtnWrap>
-                    <MobileRoute to="/signin">Sign In</MobileRoute>
-                </MobileMenuBtnWrap>
             </MobileMenuWrapper>
             
         </MobileMenuContainer>
@@ -52,15 +50,12 @@ export const MobileMenuContainer = styled.aside`
     top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
 `;
 
-export const CloseIcon = styled(FaTimes)`
-    color: #fff;
-`;
+
 
 export const Icon = styled.div`
     position: absolute;
     top: 2.25rem;
     right: 1.5rem;
-    background: transparent;
     font-size: 1.25rem;
     cursor: pointer;
     outline: none;
@@ -93,32 +88,8 @@ export const MobileMenuLink = styled(LinkScroll)`
     cursor: pointer;
 
     &:hover{
-        color: #01bf71;
+        color: #06FFF0;
         transition: 0.2s ease-in-out;
     }
 `
 
-export const MobileMenuBtnWrap = styled.div`
-    display: flex;
-    justify-content: center;
-`
-
-export const MobileRoute = styled(LinkRoute)`
-    border-radius: 50px;
-    background: #01bf71;
-    white-space: nowrap;
-    padding: 16px 64px;
-    color: #010606;
-    font-size: 16px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-
-    &:hover{
-        transition: all 0.2s ease-in-out;
-        background: #fff;
-        color: #010606;
-    }
-`

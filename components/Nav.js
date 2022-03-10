@@ -96,14 +96,14 @@ const Navbar = ({ toggle }) => {
 export default Navbar
 
 export const Nav = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
+    background: ${({ scrollNav }) => (scrollNav ? 'linear-gradient(75deg, rgba(30,28,45,0.77) 0%, rgba(20,26,47,1) 88%)' : 'transparent')};
     height: 80px;
     margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    position: sticky;
+    position: sticky !important;
     top: 0;
     z-index: 10;
 
@@ -164,7 +164,7 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.li`
-    height: 80px;
+    height: 45px;
 `
 
 export const NavLinks = styled(LinkScroll)`
@@ -177,11 +177,11 @@ export const NavLinks = styled(LinkScroll)`
     cursor: pointer;
 
     &:hover{
-        border-bottom: 3px solid #01bf71;
+        border-bottom: 1px solid #06FFF0;
     }
 
     &.active{
-        border-bottom: 3px solid #01bf71;
+        border-bottom: 3px solid #06FFF0;
     };
 `
 
@@ -195,9 +195,6 @@ export const NavBtn = styled.nav`
 `
 
 export const NavBtnLink = styled(LinkRouter)`
-    border-radius: 50px;
-    background: #01bf71;
-    white-space: nowrap;
     padding: 10px 22px;
     color: #010606;
     font-size: 1rem;
@@ -209,7 +206,6 @@ export const NavBtnLink = styled(LinkRouter)`
 
     &:hover{
         transition: all 0.2s ease-in-out;
-        background: #fff;
         color: #010606;
     }
 `

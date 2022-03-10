@@ -3,6 +3,7 @@ import styled from 'styled-components'
 // import { OrbitControls } from '@react-three/drei'
 // import { Canvas } from '@react-three/fiber'
 // import Box from './Box'
+import Hand from '../images/hand.png'
 import Solana from '../images/solana.svg'
 import RightArrow from '../images/carret_right.svg'
 
@@ -27,14 +28,7 @@ export default function Hero(){
                 </section>
             </div>
             <div className="right--column">
-                {/* <Canvas className="canvas">
-                    <OrbitControls enableZoom={false} />
-                    <ambientLight intensity={0.5} />
-                    <directionalLight position={[-2, 5, 2]} intensity={1} />
-                    <Suspense fallback={null}>
-                        <Box />
-                    </Suspense>
-                </Canvas> */}
+                <img src={Hand} className="hand" alt="hand" />
             </div>
         </HeroStyled>
     )
@@ -52,6 +46,13 @@ const HeroStyled = styled.div`
     .right--column{
         display: none;
         z-index: 1;
+        display: none;
+        align-items: end;
+        justify-content: right;
+    }
+
+    .hand{
+        height: 400px;
     }
     
     h2,h3{

@@ -13,9 +13,9 @@ export default function Home(){
 
     return (
         <div className="home-container">
-            <img src={topLeft} className="top-left-blur" alt="bg-image" />
-            <img src={topLeft} className="card-bg" alt="bg-image" />
-            <img src={spotlight} className="bottom-right-blur" alt="bg-image" />
+            <img src={topLeft} className="bg top-left-blur" alt="bg-image" />
+            <img src={topLeft} className="bg card-bg" alt="bg-image" />
+            <img src={spotlight} className="bg bottom-right-blur" alt="bg-image" />
             <Hero />
             <Banner />
             <Info />
