@@ -1,5 +1,8 @@
 import { animateScroll as scroll } from 'react-scroll';
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { AiFillFacebook } from 'react-icons/ai'
+import { BsTwitter } from 'react-icons/bs'
+import { FaDiscord } from 'react-icons/fa'
+import { AiFillGithub } from 'react-icons/ai'
 
 export default function Footer(){
     const toggleHome = () => {
@@ -45,22 +48,19 @@ export default function Footer(){
                 <section className="social-media-container">
                     <div className="social-media-wrap">
                         <div className="social-logo" to="/" onClick={toggleHome}>NFT Website</div>
-                        <div className='website-rights'>financly &copy; 2020 All rights reserved.</div>
+                        <div className='website-rights'>NFT Website &copy; 2020 All rights reserved.</div>
                         <div className="social-icons">
                             <div className="social-icon-link" href='/' target='_blank' aria-label="facebook">
-                                <FaFacebook />
+                                <AiFillFacebook />
                             </div>
                             <div className="social-icon-link" href='/' target='_blank' aria-label="facebook">
-                                <FaInstagram />
+                                <BsTwitter />
                             </div>
                             <div className="social-icon-link" href='/' target='_blank' aria-label="youtube">
-                                <FaYoutube />
+                                <FaDiscord />
                             </div>
                             <div className="social-icon-link" href='/' target='_blank' aria-label="Twitter">
-                                <FaTwitter />
-                            </div>
-                            <div className="social-icon-link" href='/' target='_blank' aria-label="Linkedin">
-                                <FaLinkedin />
+                                <AiFillGithub />
                             </div>
                         </div>
                     </div>

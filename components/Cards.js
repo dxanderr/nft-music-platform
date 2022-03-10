@@ -9,7 +9,7 @@ export default function Cards(){
         />
     })
     return(
-        <section >
+        <section className="cards-container">
             <h3 className="cards-title">Discover Music NFT</h3>
             <div className="cards">
                 {cardObjects}

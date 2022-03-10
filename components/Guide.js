@@ -37,6 +37,8 @@ const GuideStyled = styled.div `
 
     @media screen and (min-width: 768px){
         display: flex;
+        margin: auto;
+        max-width:1600px;
     }
 
 `

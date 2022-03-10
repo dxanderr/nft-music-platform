@@ -23,12 +23,12 @@ export default function Info(){
 }
 
 const InfoStyled = styled.div`
-
-    margin-top: 40px;
+    margin: 40px auto;
+    padding: 0 10%;
+    max-width:1600px;
 
     section{
         margin: 60px 0;
-        padding: 0 10%;
     }
 
     .placeholder{

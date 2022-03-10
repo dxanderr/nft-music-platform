@@ -1,5 +1,9 @@
 import {useState, useEffect} from 'react';
 import { FaBars } from 'react-icons/fa';
+import { AiFillFacebook } from 'react-icons/ai'
+import { BsTwitter } from 'react-icons/bs'
+import { FaDiscord } from 'react-icons/fa'
+import { AiFillGithub } from 'react-icons/ai'
 import {animateScroll as scroll} from 'react-scroll';
 import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom'
@@ -28,14 +32,27 @@ const Navbar = ({ toggle }) => {
     return (
         <Nav scrollNav={scrollNav}>
             <NavbarContainer className="navbar-container">
-                <NavLogo to="/" onClick={toggleHome} >NFT Website</NavLogo>
+                <NavLogo to="/" onClick={toggleHome}>
+                    <strong>Music</strong>
+                    <p>NFT Platform</p>
+                </NavLogo>
                 {/* Mobile Menu  */}
                 <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="about"
+                        <NavLinks to="#"
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true' 
+                        offset={-80}
+                        >Marketplace</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks 
+                        to="#"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
@@ -45,38 +62,32 @@ const Navbar = ({ toggle }) => {
                     </NavItem>
                     <NavItem>
                         <NavLinks 
-                        to="discover"
+                        to="#"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true' 
                         offset={-80}
-                        >Discover</NavLinks>
+                        >Resources</NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks 
-                        to="services"
+                        to="#"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true' 
                         offset={-80}
-                        >Services</NavLinks>
-                    </NavItem>
-                    <NavItem>
-                        <NavLinks 
-                        to="signup"
-                        smooth={true} 
-                        duration={500} 
-                        spy={true} 
-                        exact='true' 
-                        offset={-80}
-                        >Sign Up</NavLinks>
+                        >FAQ</NavLinks>
                     </NavItem>
                 </NavMenu>
-                <NavBtn>
-                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
-                </NavBtn>
+                {/* Social Media Links */}
+                <div className="social">
+                    <AiFillFacebook />
+                    <BsTwitter />
+                    <FaDiscord />
+                    <AiFillGithub />
+                </div>
             </NavbarContainer>
         </Nav>
     );
@@ -102,25 +113,27 @@ export const Nav = styled.nav`
 `
 
 export const NavbarContainer = styled.div`
+    padding: 0 10%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 80px;
     z-index: 1;
     width: 100%;
-    padding: 0 24px;
-    max-width:1100px;
+    max-width:1600px;
 `
 
 export const NavLogo = styled(LinkRouter)`
     color: #fff;
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
-    display: flex;
     align-items: center;
-    margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+
+    p{
+        font-weight: 400;
+    }
 `
 
 export const MobileIcon = styled.div`

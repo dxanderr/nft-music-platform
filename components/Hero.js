@@ -41,8 +41,9 @@ export default function Hero(){
 }
 
 const HeroStyled = styled.div`
+    margin: auto;
+    max-width:1600px;
     padding: 120px 10% 0 10%;  
-
     .left--column{
         z-index: 2;
         display: block;          
@@ -155,6 +156,7 @@ const HeroStyled = styled.div`
     }
     @media screen and (min-width: 1200px){
         padding: 120px 10% 0 10%;
+        max-width: 1600px;
     }
 
 `
