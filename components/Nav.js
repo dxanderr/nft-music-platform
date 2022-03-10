@@ -1,141 +1,202 @@
-import styled from 'styled-components'
-import NavMenu from './NavMenu'
+import {useState, useEffect} from 'react';
+import { FaBars } from 'react-icons/fa';
+import {animateScroll as scroll} from 'react-scroll';
+import styled from 'styled-components';
+import { Link as LinkRouter } from 'react-router-dom'
+import { Link as LinkScroll } from 'react-scroll'
 
+const Navbar = ({ toggle }) => {
+    const [scrollNav, setScrollNav] = useState(false)
 
-// react-icons 
-import { AiFillFacebook } from 'react-icons/ai'
-import { BsTwitter } from 'react-icons/bs'
-import { FaDiscord } from 'react-icons/fa'
-import { AiFillGithub } from 'react-icons/ai'
- 
-export default function Nav(){
-    return(
-        <NavStyled>
-            {/* Logo */}
-            <div className="logo">
-                <strong>Music</strong>
-                <p>NFT Platform</p>
-            </div>
+    const changeNav = () => {
+        if(window.scrollY >= 80) {
+            setScrollNav(true)
+        } else{
+            setScrollNav(false)
+        }
+    }
 
-            {/* Navigation Links */}
-            <nav>
-                <p className="nav-links">MARKETPLACE</p>
-                <p className="nav-links">ABOUT</p>
-                <p className="nav-links">RESOURCES</p>
-                <p className="nav-links">FAQ</p>
-            </nav>
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    },[])
 
-            {/* Search Field */}
-            {/* <input type="text" className="search-field" placeholder="search..">
-            
-            </input> */}
-            
-            <div className="group">
-                {/* Social Media Links */}
-                <div className="social-links">
-                    <AiFillFacebook />
-                    <BsTwitter />
-                    <FaDiscord />
-                    <AiFillGithub />
-                </div>
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
 
-                {/* Navigation Menu  */}
-                <NavMenu />
-            </div>
-        </NavStyled>
-    )
+    
+    return (
+        <Nav scrollNav={scrollNav}>
+            <NavbarContainer className="navbar-container">
+                <NavLogo to="/" onClick={toggleHome} >NFT Website</NavLogo>
+                {/* Mobile Menu  */}
+                <MobileIcon onClick={toggle}>
+                    <FaBars />
+                </MobileIcon>
+                <NavMenu>
+                    <NavItem>
+                        <NavLinks to="about"
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true' 
+                        offset={-80}
+                        >About</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks 
+                        to="discover"
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true' 
+                        offset={-80}
+                        >Discover</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks 
+                        to="services"
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true' 
+                        offset={-80}
+                        >Services</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks 
+                        to="signup"
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true' 
+                        offset={-80}
+                        >Sign Up</NavLinks>
+                    </NavItem>
+                </NavMenu>
+                <NavBtn>
+                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                </NavBtn>
+            </NavbarContainer>
+        </Nav>
+    );
 }
 
+export default Navbar
 
-const NavStyled = styled.div`
+export const Nav = styled.nav`
+    background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
     height: 80px;
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    @media screen and (max-width: 960px){
+        transition: 0.8s all ease;
+    }
+`
+
+export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    padding: 0 24px;
+    max-width:1100px;
+`
+
+export const NavLogo = styled(LinkRouter)`
+    color: #fff;
+    justify-self: flex-start;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
     align-items: center;
-    padding: 0 10%;
-    z-index: 0;
-    
-    nav{
-        display: none;
-        z-index: 1;
-    }
-    
-    /* Logo */
-    .logo{
+    margin-left: 24px;
+    font-weight: bold;
+    text-decoration: none;
+`
+
+export const MobileIcon = styled.div`
+    display: none;
+
+    @media screen and (max-width: 768px){
+        display:block;
+        position: absolute;
+        top: .8rem;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.4rem;
         cursor: pointer;
-        z-index: 1;
-        font-size: 12px;
+        color: #fff;
     }
+`
 
-    /* Navigation */
-    .nav-links{
-        margin: 0 16px;
-        font-size: 14px;
-        color: white;
-        cursor: pointer;
+export const NavMenu = styled.ul`
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin-right: --22px;
 
-        &:hover{
-            color: #06F3FF;
-        }
-    }
-
-    /* Search Field */
-    .search-field{
-        background: #DEDEDE;
-        box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
-        padding: 5px 5px 5px 10px;
-        width: 40%;
-        border-radius: 8px;
-        z-index: 1;
-
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #828282;
-            opacity: 1; /* Firefox */
-        }
-    
-        :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #828282;
-        }
-    
-        ::-ms-input-placeholder { /* Microsoft Edge */
-            color: #828282;
-        }    
-    }
-
-    .group{
-        display: flex;
-        align-items: center;
-    }
-
-    /* Social media icons */
-    .social-links{ 
+    @media screen and (max-width: 768px){
         display: none;
-        z-index: 1;
-        svg{
-            margin: 0 5px;
-            cursor: pointer;
-            
-            &:hover{
-                fill: lime;
-            }
-        }
+    }
+`
+
+export const NavItem = styled.li`
+    height: 80px;
+`
+
+export const NavLinks = styled(LinkScroll)`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+
+    &:hover{
+        border-bottom: 3px solid #01bf71;
     }
 
-    /* Tablet / Desktop Sizing */
-    @media screen and (min-width: 768px){
-        .social-links{
-            display: flex;
-        }
-    }
-    /* Desktop Sizing */
-    @media screen and (min-width: 1200px){
-        padding: 0 10%;
-        nav{
-            display: flex;
-        }
+    &.active{
+        border-bottom: 3px solid #01bf71;
+    };
+`
 
-        .search-field{
-            width: 200px;
-        }
+export const NavBtn = styled.nav`
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+`
+
+export const NavBtnLink = styled(LinkRouter)`
+    border-radius: 50px;
+    background: #01bf71;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #010606;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        background: #fff;
+        color: #010606;
     }
 `
