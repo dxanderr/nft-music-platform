@@ -1,11 +1,7 @@
 import styled from 'styled-components'
-// import { Suspense } from 'react'
-// import { OrbitControls } from '@react-three/drei'
-// import { Canvas } from '@react-three/fiber'
-// import Box from './Box'
-import Hand from '../images/hand.png'
 import Solana from '../images/solana.svg'
 import RightArrow from '../images/carret_right.svg'
+import Card from '../images/card_example.png'
 
 export default function Hero(){
     return(
@@ -28,7 +24,7 @@ export default function Hero(){
                 </section>
             </div>
             <div className="right--column">
-                <img src={Hand} className="hand" alt="hand" />
+                <img src={Card} className="hand" alt="hand" />
             </div>
         </HeroStyled>
     )
@@ -47,12 +43,12 @@ const HeroStyled = styled.div`
         display: none;
         z-index: 1;
         display: none;
-        align-items: end;
+        align-items: center;
         justify-content: right;
     }
 
     .hand{
-        height: 400px;
+        height: 350px;
     }
     
     h2,h3{

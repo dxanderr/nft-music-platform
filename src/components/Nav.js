@@ -96,7 +96,7 @@ const Navbar = ({ toggle }) => {
 export default Navbar
 
 export const Nav = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? 'linear-gradient(75deg, rgba(30,28,45,0.77) 0%, rgba(20,26,47,1) 88%)' : 'transparent')};
+    background: ${({ scrollNav }) => (scrollNav ? 'linear-gradient(75deg, rgba(0,0,0,0.7990119485294118) 0%, rgba(6,30,36,0.3754825367647059) 100%)' : 'transparent')};
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -139,7 +139,7 @@ export const NavLogo = styled(LinkRouter)`
 export const MobileIcon = styled.div`
     display: none;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 968px){
         display:block;
         position: absolute;
         top: .8rem;
@@ -158,7 +158,7 @@ export const NavMenu = styled.ul`
     text-align: center;
     margin-right: --22px;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 968px){
         display: none;
     }
 `
@@ -189,7 +189,7 @@ export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 968px){
         display: none;
     }
 `
