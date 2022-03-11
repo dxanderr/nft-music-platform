@@ -55,7 +55,6 @@ const InfoStyled = styled.div`
     
     /* images */
     .info_image{
-        margin-left: 40px;
         width: 300px;
     }
 
@@ -82,8 +81,7 @@ const InfoStyled = styled.div`
             width: 60%;
         }
 
-        .placeholder{
-            margin-left: 40px;
+        .info_image{
+            margin-left: 40px;        
         }
-    }
 `

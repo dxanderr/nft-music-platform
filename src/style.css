@@ -2,7 +2,10 @@
 --primary: #06FFF0;
 --scrollbar-track: #0e0e0e;
 --scrollbar-thumb: #1d1f1e;
+--card-gradient: linear-gradient(180deg, rgba(12,12,12,1) 0%, rgba(14,13,21,1) 54%, rgba(58,37,108,1) 100%, rgba(103,65,153,1) 100%);
 }
+
+
 
 *{
   margin: 0;
@@ -63,6 +66,7 @@
   z-index: 0;
 } */
 
+/* Colors in background of cards section */
 .card-bg{
     position: absolute;
     z-index: -1;
@@ -70,7 +74,6 @@
     height: 1400px;
     opacity: 0.5;
 }
-
 /* Card Component Styles */
 .cards-container{
   margin: auto;
@@ -85,7 +88,7 @@
 }
 
 .cards {
-  height: 520px;
+  height: 485px;
   margin: 100px 0;
   display: flex;
   flex-wrap: nowrap;
@@ -93,40 +96,31 @@
   overflow-x: auto;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: #666;
-  outline: 1px solid #eee;
-}
-
 .card {
-  position:relative;
-  width: 360px;
+  width: 320px;
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
-  padding: 40px 20px 0 0;
+  padding: 10px;
   flex-direction: column; 
+  border-radius: 16px;
+  background: var(--card-gradient);
 }
 
 .test{
   height: 100%;
   border-radius: 4px;
-  border: solid white 1px;
-  padding: 0 30px;
 }
 
 .image-container{
   height: 250px;
-
+  object-fit: contain;
 }
 
 .image {
-  position: absolute;
-  top: 0;
-  right: -8%;
-  z-index: 10;
-  height: 260px;
-  width: 360px;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 .card--title {
