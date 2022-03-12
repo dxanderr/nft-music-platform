@@ -7,6 +7,8 @@ export default function Card2(props){
 
     if (active){
         badgeText = "Online"
+    } else {
+        badgeText = "Offline"
     }
 
     return(
@@ -15,21 +17,22 @@ export default function Card2(props){
                 <img src={photo} className="image" alt='blank' />
             </div>
             <div className="card--info">
+                <img src={profile} alt="profile-pic" className="profile-pic" />
+                
+                { badgeText === "Online" ? 
+                    <p className="badge badge1">
+                    {badgeText} 
+                    </p> :
+                    <p className="badge badge2">{badgeText}</p>
+                }
+                {/* react icon */}
+                <p className="name">{name}</p>
+                <p className="genre">{genre}</p>
                 <div className="card--price">
                     <p className="grey">Current Bid</p>
                     <img src={Eth} className="coin-img" alt="coin" />
                     <p className="card--value">{bid}</p>
                 </div>
-                <img src={profile} alt="profile-pic" className="profile-pic" />
-                
-                { badgeText && 
-                    <p className="badge badge1">
-                    {badgeText}
-                    </p> 
-                }
-                {/* react icon */}
-                <p className="name">{name}</p>
-                <p className="genre">{genre}</p>
             </div>
         </div>
     )

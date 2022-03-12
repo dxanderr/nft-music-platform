@@ -2,8 +2,9 @@
 --primary: #06FFF0;
 --scrollbar-track: #0e0e0e;
 --scrollbar-thumb: #1d1f1e;
---card-gradient: linear-gradient(180deg, rgba(12,12,12,1) 0%, rgba(14,13,21,1) 54%, rgba(58,37,108,1) 100%, rgba(103,65,153,1) 100%);
+--card-gradient:  linear-gradient(145deg, rgba(224,192,53,1) 13%, rgba(217,194,96,1) 31%, rgba(229,232,137,1) 51%, rgba(217,194,96,1) 71%, rgba(224,192,53,1) 83%);
 }
+
 
 
 
@@ -57,15 +58,6 @@
   border-bottom: 1px solid #06FFF0;  
 }
 
-/* .nav-fog{
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.116);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  z-index: 0;
-} */
-
 /* Colors in background of cards section */
 .card-bg{
     position: absolute;
@@ -91,34 +83,31 @@
   height: 485px;
   margin: 100px 0;
   display: flex;
-  flex-wrap: nowrap;
   gap: 40px;
   overflow-x: auto;
 }
 
 .card {
+  height: 470px;
   width: 320px;
   font-size: 12px;
   flex: 0 0 auto;         
   display: flex;          
   padding: 10px;
   flex-direction: column; 
-  border-radius: 16px;
-  background: var(--card-gradient);
-}
-
-.test{
-  height: 100%;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .image-container{
   height: 250px;
-  object-fit: contain;
 }
 
 .image {
-  border-radius: 20px;
+  border-radius: 9px;
   height: 100%;
   width: 100%;
 }
@@ -161,6 +150,7 @@
 
 /* Card 2 Styles */
 .card--info{
+  margin-top: 20px;
   height: 240px;
   width: 100%;
 }
@@ -181,7 +171,7 @@
 }
 
 .grey{
-  color: grey;
+  color: #cdcaca;
 }
 
 
@@ -194,6 +184,10 @@
 
 .badge1{
   color: lime;
+}
+
+.badge2{
+  color: tomato;
 }
 
 .profile-pic{
@@ -209,6 +203,14 @@
 }
 
 
+/* Cards Tablet and Desktop Responsiveness */
+@media screen and (min-width: 768px){
+  .cards{
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 
 /* buttons */
@@ -342,6 +344,8 @@
 }
 
 @media screen and (max-width: 968px){
+
+  /* Footer Tablet and Desktop Responsiveness */
   .footer-wrap{
     height: 440px;
   }
@@ -358,4 +362,5 @@
   .social-media-wrap{
     flex-direction: column;
   }
+
 }

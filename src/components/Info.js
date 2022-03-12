@@ -70,6 +70,9 @@ const InfoStyled = styled.div`
             align-items:center;
             justify-content: center;
         }
+        .info_image{
+            margin-left: 40px;        
+        }
     }
 
     @media screen and (min-width: 986px){
@@ -77,11 +80,4 @@ const InfoStyled = styled.div`
             display: flex;
         }
 
-        .text{
-            width: 60%;
-        }
-
-        .info_image{
-            margin-left: 40px;        
-        }
 `
