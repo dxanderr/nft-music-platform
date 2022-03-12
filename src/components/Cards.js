@@ -1,5 +1,5 @@
-import Card from './Card'
-import Data from '../data'
+import Card from './Card2'
+import Data from './CardData'
 
 export default function Cards(){
     const cardObjects = Data.map(card => {

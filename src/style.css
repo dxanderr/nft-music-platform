@@ -159,6 +159,57 @@
     font-weight: bold;
 }
 
+/* Card 2 Styles */
+.card--info{
+  height: 240px;
+  width: 100%;
+}
+
+.card--price{
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 14px;
+}
+
+.grey,
+.coin-img,
+.card--value{
+  padding: 0 5px;
+}
+
+.grey{
+  color: grey;
+}
+
+
+.badge,
+.name,
+.genre{
+  text-align: center;
+  padding: 5px 0;
+}
+
+.badge1{
+  color: lime;
+}
+
+.profile-pic{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.name{
+  text-transform: uppercase;
+}
+
+
+
 
 /* buttons */
 .buttons{
