@@ -14,7 +14,7 @@ export default [
     {
         id: 2,
         photo: "./images/sample_nft2.png",
-        profile: "./images/default-prof.png",
+        profile: "./images/default-prof.png", 
         name: "John Darryl",
         check: true,
         friend: false,
