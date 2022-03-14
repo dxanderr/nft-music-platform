@@ -1,29 +1,45 @@
-import "../style.css"
+import Eth from '../images/eth.svg'
+import SingleCopy from '../images/cube.svg'
+import Active from '../images/active.svg'
+import '../style.css'
 
-
-export default function Card(props) {
-    let { title, price, coverImg, currImg, tokens } = props.card
+export default function Card2(props){
+    let { photo, profile, name, title, bid, active, status, available_nfts, available_nfts_amt } = props.card
     let badgeText
-    return (
+
+    if (active){
+        badgeText = "Online"
+    } else {
+        badgeText = "Offline"
+    }
+
+    return(
         <div className="card">
-            {/* {badgeText && <div className="card--badge">{badgeText}</div>} */}
-            <div className="test">
-                <div className="image-container">
-                    <img src={coverImg} className="image" alt='blank' />
-                </div>
-                <div className="card--info">
-                    <p className="card--title">{title}</p>
-                    <div className="price-container">
-                        <div className="coin-price">
-                            <img src={currImg} className="curr-logo" alt="start" />
-                            <p>{price}</p>
-                        </div>
-                        <p>{tokens}</p>
+            <div className="image-container">
+                <img src={photo} className="image" alt='blank' />
+            </div>
+            <div className="card--info">
+                <img src={profile} alt="profile-pic" className="profile-pic" />
+                
+                { badgeText === "Online" && 
+                     <img src={Active} alt="active status" className="active-badge" />
+                }
+                {/* react icon */}
+                <p className="artist-name">{name}</p>
+                <p className="song--title">{title}</p>
+                <div className="card-bottom">
+                    <div className="card--price">
+                        <p className="total-raised-header">Total Raised</p>
+                        <p className="card--value">{bid} Eth</p>
                     </div>
-                </div>
-                <div className="buttons">
-                    <button className="button play-now"><p>Play Now</p></button>
-                    <button className="button buy"><p>Buy NFT</p></button>
+                    { available_nfts ? 
+                        <div className="available_nfts">
+                            <p className="stock">AVAILABLE NFTS</p>
+                            <p className="num-nfts">{ available_nfts_amt }</p>
+                        </div>
+                        :
+                        <img className="single-copy" src={SingleCopy} alt=""/>
+                    }    
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import Card from './Card2'
+import Card from './Card'
 import Data from './CardData'
 
 export default function Cards(){

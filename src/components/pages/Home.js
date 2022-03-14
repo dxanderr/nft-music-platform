@@ -12,7 +12,7 @@ import Cards from '../Cards'
 export default function Home(){
 
     return (
-        <div className="home-container">
+        <div className="container home-container">
             <img src={topLeft} className="bg top-left-blur" alt="bg-image" />
             <img src={topLeft} className="bg card-bg" alt="bg-image" />
             <img src={spotlight} className="bg bottom-right-blur" alt="bg-image" />

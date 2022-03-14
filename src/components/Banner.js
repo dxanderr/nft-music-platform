@@ -49,9 +49,8 @@ export default function Banner(){
 
 
 const BannerStyled = styled.div`
-
-height: 60px;
-margin-top: 80px;
+margin: 80px 0;
+padding: 40px 0;
 display: flex;
 align-items:center;
 border-top: 1px solid white;

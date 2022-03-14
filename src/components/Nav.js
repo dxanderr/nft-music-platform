@@ -42,7 +42,7 @@ const Navbar = ({ toggle }) => {
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="#"
+                        <NavLinks to="/marketplace"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
@@ -52,7 +52,7 @@ const Navbar = ({ toggle }) => {
                     </NavItem>
                     <NavItem>
                         <NavLinks 
-                        to="#"
+                        to="/about"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
@@ -62,7 +62,7 @@ const Navbar = ({ toggle }) => {
                     </NavItem>
                     <NavItem>
                         <NavLinks 
-                        to="#"
+                        to="/resources"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
@@ -72,7 +72,7 @@ const Navbar = ({ toggle }) => {
                     </NavItem>
                     <NavItem>
                         <NavLinks 
-                        to="#"
+                        to="/faq"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
@@ -156,7 +156,6 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: --22px;
 
     @media screen and (max-width: 968px){
         display: none;
@@ -168,16 +167,25 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkScroll)`
+    position: relative ;
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 1rem;
     height: 100%;
     cursor: pointer;
 
-    &:hover{
-        border-bottom: 1px solid #06FFF0;
+    &:hover::after{
+            content: "";
+            position: absolute;
+            background-color: lime;
+            top: 40px;
+            right: 50%;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+        }
     }
 
     &.active{

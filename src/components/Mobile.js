@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { Link as LinkScroll } from 'react-scroll';
 // import { Link as LinkRoute } from 'react-scroll';
-import { AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineClose, AiFillFacebook, AiFillGithub } from 'react-icons/ai'
+import { BsTwitter } from 'react-icons/bs'
+import { FaDiscord } from 'react-icons/fa'
 
 const MobileMenu = ({isOpen, toggle}) => {
 
@@ -25,6 +27,12 @@ const MobileMenu = ({isOpen, toggle}) => {
                         FAQ
                     </MobileMenuLink>
                 </Menu>
+                <div className="social-mobile">
+                    <AiFillFacebook />
+                    <BsTwitter />
+                    <FaDiscord />
+                    <AiFillGithub />
+                </div>
             </MobileMenuWrapper>
             
         </MobileMenuContainer>
@@ -63,16 +71,24 @@ export const Icon = styled.div`
 
 export const MobileMenuWrapper = styled.div`
     color: #fff;
+
+    .social-mobile{
+        margin-top: 20px;
+        font-size: 20px;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+    }
 `
 
 export const Menu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6,80px);
+    grid-template-rows: repeat(4,80px);
     text-align: center;
 
     @media screen and (max-width: 480px){
-        grid-template-rows: repeat(6, 60px)
+        grid-template-rows: repeat(4, 60px)
     }
 `
 
