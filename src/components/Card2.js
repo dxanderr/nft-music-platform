@@ -1,8 +1,9 @@
 import Eth from '../images/eth.svg'
+import Active from '../images/active.svg'
 import '../style.css'
 
 export default function Card2(props){
-    let { photo , profile, name, bid, genre, active } = props.card
+    let { photo , profile, name, title, bid, active } = props.card
     let badgeText
 
     if (active){
@@ -19,19 +20,15 @@ export default function Card2(props){
             <div className="card--info">
                 <img src={profile} alt="profile-pic" className="profile-pic" />
                 
-                { badgeText === "Online" ? 
-                    <p className="badge badge1">
-                    {badgeText} 
-                    </p> :
-                    <p className="badge badge2">{badgeText}</p>
+                { badgeText === "Online" && 
+                     <img src={Active} alt="active status" className="active-badge" />
                 }
                 {/* react icon */}
-                <p className="name">{name}</p>
-                <p className="genre">{genre}</p>
+                <p className="artist-name">{name}</p>
+                <p className="song--title">{title}</p>
                 <div className="card--price">
-                    <p className="grey">Current Bid</p>
-                    <img src={Eth} className="coin-img" alt="coin" />
-                    <p className="card--value">{bid}</p>
+                    <p className="total-raised-header">Total Raised</p>
+                    <p className="card--value">{bid} Eth</p>
                 </div>
             </div>
         </div>

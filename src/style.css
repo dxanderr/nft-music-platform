@@ -2,7 +2,6 @@
 --primary: #06FFF0;
 --scrollbar-track: #0e0e0e;
 --scrollbar-thumb: #1d1f1e;
---card-gradient:  linear-gradient(145deg, rgba(224,192,53,1) 13%, rgba(217,194,96,1) 31%, rgba(229,232,137,1) 51%, rgba(217,194,96,1) 71%, rgba(224,192,53,1) 83%);
 }
 
 
@@ -58,7 +57,7 @@
   border-bottom: 1px solid #06FFF0;  
 }
 
-/* Colors in background of cards section */
+/* Background image behind cards section - purple blur */
 .card-bg{
     position: absolute;
     z-index: -1;
@@ -95,13 +94,12 @@
   display: flex;          
   padding: 10px;
   flex-direction: column; 
-  background: rgba(255, 255, 255, 0.1);
+  background: #aedcd1;
   border-radius: 12px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);      
 }
-
 .image-container{
   height: 250px;
 }
@@ -110,6 +108,98 @@
   border-radius: 9px;
   height: 100%;
   width: 100%;
+}
+
+.profile-pic{
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: solid 2px black;
+}
+
+.card--badge{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  font-weight: bold;
+}
+
+.card--info{
+  margin-top: 20px;
+  height: 240px;
+  width: 100%;
+  position: relative;
+}
+
+
+
+.grey,
+.coin-img,
+.card--value{
+  padding: 0 5px;
+}
+
+.artist-name,
+.genre{
+  padding: 5px 0;
+}
+
+.active-badge{
+  position: absolute;
+  top: -44px;
+  left: 65px;
+  height: 14px;
+}
+
+.artist-name,
+.song--title,
+.total-raised-header,
+.card--value{
+  font-family: 'Jura', sans-serif;
+}
+
+.artist-name{
+  margin-top: 20px;
+  font-size: 14px;
+  color :#4D5562;
+  text-transform: uppercase;
+}
+
+.song--title{
+  font-size: 24px;
+  color: #0E1213;
+  font-weight: 700;
+}
+
+.total-raised-header{
+  margin-top: 36px;
+  font-size: 14px;
+  color: #4D5562;
+}
+
+.card--value{
+  color: #0E1213;
+  font-size: 24px;
+}
+
+
+.price-container{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.coin-price{
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .card--title {
@@ -125,83 +215,6 @@
 .card--price {
     margin-top: auto;
 }
-
-.price-container{
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-}
-
-.coin-price{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-
-.card--badge{
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    background-color: white;
-    padding: 5px 7px;
-    font-weight: bold;
-}
-
-/* Card 2 Styles */
-.card--info{
-  margin-top: 20px;
-  height: 240px;
-  width: 100%;
-}
-
-.card--price{
-  margin: 10px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  font-size: 14px;
-}
-
-.grey,
-.coin-img,
-.card--value{
-  padding: 0 5px;
-}
-
-.grey{
-  color: #cdcaca;
-}
-
-
-.badge,
-.name,
-.genre{
-  text-align: center;
-  padding: 5px 0;
-}
-
-.badge1{
-  color: lime;
-}
-
-.badge2{
-  color: tomato;
-}
-
-.profile-pic{
-  height: 40px;
-  width: 40px;
-  display: flex;
-  margin: 0 auto;
-  border-radius: 50%;
-}
-
-.name{
-  text-transform: uppercase;
-}
-
 
 /* Cards Tablet and Desktop Responsiveness */
 @media screen and (min-width: 768px){

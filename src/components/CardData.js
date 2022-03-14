@@ -4,6 +4,7 @@ export default [
         photo: "./images/sample_nft.png",
         profile: "./images/default-prof.png",
         name: "John Darryl",
+        title: "NEW WAVE",
         check: true,
         friend: false,
         bid: "0.78",
@@ -16,6 +17,7 @@ export default [
         photo: "./images/sample_nft2.png",
         profile: "./images/default-prof.png", 
         name: "John Darryl",
+        title: "Gotta See Part II",
         check: true,
         friend: false,
         bid: "0.78",
@@ -28,6 +30,7 @@ export default [
         photo: "./images/sample_nft3.png",
         profile: "./images/default-prof.png",
         name: "John Darryl",
+        title: "Gotta See Part III",
         check: true,
         friend: false,
         bid: "0.78",
@@ -36,10 +39,11 @@ export default [
         active: false
     },
     {
-        id: 3,
+        id: 4,
         photo: "./images/sample_nft3.png",
         profile: "./images/default-prof.png",
         name: "John Darryl",
+        title: "Gotta See Part III",
         check: true,
         friend: false,
         bid: "0.78",
@@ -48,10 +52,11 @@ export default [
         active: false
     },
     {
-        id: 3,
+        id: 5,
         photo: "./images/sample_nft3.png",
         profile: "./images/default-prof.png",
         name: "John Darryl",
+        title: "Gotta See Part III",
         check: true,
         friend: false,
         bid: "0.78",
@@ -60,10 +65,11 @@ export default [
         active: false
     },
     {
-        id: 3,
+        id: 6,
         photo: "./images/sample_nft3.png",
         profile: "./images/default-prof.png",
         name: "John Darryl",
+        title: "Gotta See Part III",
         check: true,
         friend: false,
         bid: "0.78",
