@@ -30,8 +30,8 @@ export default function App(){
                 <Route path="/" exact element={<Home />} />
                 <Route path="/marketplace" exact element={<Marketplace />} />
                 <Route path="/about" exact element={<About />} />
-                <Route path="/resources" exact element={<About />} />
-                <Route path="/faq" exact element={<About />} />
+                <Route path="/resources" exact element={<Resources />} />
+                <Route path="/faq" exact element={<FAQ />} />
             </Routes>
             <Footer />
         </Router>
