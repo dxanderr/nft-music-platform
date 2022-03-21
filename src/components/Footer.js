@@ -16,31 +16,31 @@ export default function Footer(){
                     <div className="footer-links-wrapper">
                         
                         <div className="footer-link-items">
-                            <h1 className="footer-links-title">About Us</h1>
-                            <a className="footer-link" to="/">Journey</a>
-                            <a className="footer-link" to="/">Journey</a>
+                            <h1 className="footer-links-title">Marketplace</h1>
+                            <a className="footer-link" to="/">New Collections</a>
+                            <a className="footer-link" to="/">Minting</a>
                         </div>
 
                         <div className="footer-link-items">
-                            <h1 className="footer-links-title">FAQ</h1>
-                            <a className="footer-link" to="/">Media</a>
-                            <a className="footer-link" to="/">Media</a>
+                            <h1 className="footer-links-title">About</h1>
+                            <a className="footer-link" to="/">Newsletter</a>
+                            <a className="footer-link" to="/">Resources</a>
                         </div>
                     </div>
 
                     <div className="footer-links-wrapper">
 
                         <div className="footer-link-items">
-                            <h1 className="footer-links-title">Resources</h1>
-                            <a className="footer-link" to="/">Tutorials</a>
-                            <a className="footer-link" to="/">Tutorials</a>
+                            <h1 className="footer-links-title">Artists</h1>
+                            <a className="footer-link" to="/">Creators</a>
+                            <a className="footer-link" to="/">Engineers</a>
 
                         </div>
 
                         <div className="footer-link-items">
                             <h1 className="footer-links-title">Support</h1>
-                            <a className="footer-link" to="/">Sign Up</a>
-                            <a className="footer-link" to="/">Sign Up</a>
+                            <a className="footer-link" to="/">Donate</a>
+                            <a className="footer-link" to="/">Join</a>
                         </div>
 
                     </div>
