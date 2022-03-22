@@ -24,7 +24,7 @@ export default function Hero(){
                 </section>
             </div>
             <div className="right--column">
-                <img src={Card} className="hand" alt="hand" />
+                <img src={Card} className="hero-cards" alt="hand" />
             </div>
         </HeroStyled>
     )
@@ -47,7 +47,7 @@ const HeroStyled = styled.div`
         justify-content: right;
     }
 
-    .hand{
+    .hero-cards{
         height: 350px;
     }
     
