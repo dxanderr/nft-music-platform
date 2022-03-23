@@ -2,7 +2,7 @@ import Cards from '../Cards'
 
 export default function Marketplace() {
     return (
-        <div className="container marketplace">
+        <div className="marketplace-container">
             <Cards />
         </div>
     )

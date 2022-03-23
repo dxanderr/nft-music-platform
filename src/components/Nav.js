@@ -7,7 +7,6 @@ import { AiFillGithub } from 'react-icons/ai'
 import {animateScroll as scroll} from 'react-scroll';
 import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom'
-import { Link as LinkScroll } from 'react-scroll'
 
 const Navbar = ({ toggle }) => {
     const [scrollNav, setScrollNav] = useState(false)
@@ -42,43 +41,43 @@ const Navbar = ({ toggle }) => {
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="/marketplace"
+                        <NavLink to="/marketplace"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true' 
                         offset={-80}
-                        >Marketplace</NavLinks>
+                        >Marketplace</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLinks 
+                        <NavLink 
                         to="/about"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true' 
                         offset={-80}
-                        >About</NavLinks>
+                        >About</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLinks 
+                        <NavLink 
                         to="/resources"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true' 
                         offset={-80}
-                        >Resources</NavLinks>
+                        >Resources</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLinks 
+                        <NavLink 
                         to="/faq"
                         smooth={true} 
                         duration={500} 
                         spy={true} 
                         exact='true' 
                         offset={-80}
-                        >FAQ</NavLinks>
+                        >FAQ</NavLink>
                     </NavItem>
                 </NavMenu>
                 {/* Social Media Links */}
@@ -166,7 +165,7 @@ export const NavItem = styled.li`
     height: 45px;
 `
 
-export const NavLinks = styled(LinkScroll)`
+export const NavLink = styled(LinkRouter)`
     position: relative ;
     color: #fff;
     display: flex;

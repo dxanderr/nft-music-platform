@@ -1,5 +1,5 @@
 export default function Resources() {
     return (
-        <div>Resources Page</div>
+        <div className="resources-container"></div>
     )
 }

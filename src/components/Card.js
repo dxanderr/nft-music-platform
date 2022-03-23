@@ -1,10 +1,9 @@
-import Eth from '../images/eth.svg'
 import SingleCopy from '../images/cube.svg'
 import Active from '../images/active.svg'
 import '../style.css'
 
 export default function Card2(props){
-    let { photo, profile, name, title, bid, active, status, available_nfts, available_nfts_amt } = props.card
+    let { photo, profile, name, title, bid, active, available_nfts, available_nfts_amt } = props.card
     let badgeText
 
     if (active){

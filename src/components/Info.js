@@ -71,13 +71,26 @@ const InfoStyled = styled.div`
             justify-content: center;
         }
         .info_image{
-            margin-left: 40px;        
+            margin-left: 40px;  
+            width: 300px;      
+            height: 180px;
         }
-    }
 
+    }
+    
     @media screen and (min-width: 986px){
         section{
             display: flex;
+
+            .info_image{
+                margin-left: 40px;  
+                width: 400px;      
+                height: 280px;
+            }
+            
+            .paragraph{
+                width: 80%;
+            }
         }
 
 `
