@@ -12,8 +12,3 @@
 - Styled components became difficult to organize and keep efficient 
 - Future projects (example - [barber-shop](https://github.com/wright-donovan/barber-shop)) will use a different [react-starter](https://github.com/wright-donovan/react-website-starter) so other developers can easily navigate to the styles associated with the components.  
 
-## Instructions to Preview
-- Clone Repo
-- Open terminal with code editor
-- Run npm install
-- npm start ( preview locally )
