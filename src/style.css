@@ -73,7 +73,27 @@
     height: 1400px;
     opacity: 0.5;
 }
+
+
 /* Card Component Styles */
+.cards-title{
+  margin: 40px 0 20px 0;
+}
+
+.filter-btn{
+  margin: 10px 5px;
+  padding: 4px 10px;
+  width: 100px;
+  background: transparent;
+  border: solid 1px white;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background: white;
+  color: black;
+}
+
 .cards-container{
   margin: auto;
   max-width:1600px;  
@@ -175,6 +195,7 @@
 }
 
 .artist-name,
+.genre,
 .song--title,
 .total-raised-header,
 .card--value,
@@ -182,11 +203,15 @@
   font-family: 'Jura', sans-serif;
 }
 
-.artist-name{
-  margin-top: 20px;
+.artist-name,
+.genre{
   font-size: 14px;
   color :#4D5562;
   text-transform: uppercase;
+}
+
+.artist-name{
+  margin-top: 20px;
 }
 
 .song--title{
@@ -202,7 +227,7 @@
 }
 
 .total-raised-header{
-  margin-top: 36px;
+  margin-top: 22px;
   font-size: 14px;
   color: #4D5562;
 }

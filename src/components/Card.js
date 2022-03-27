@@ -3,7 +3,7 @@ import Active from '../images/active.svg'
 import '../style.css'
 
 export default function Card2(props){
-    let { photo, profile, name, title, bid, active, available_nfts, available_nfts_amt } = props.card
+    let { photo, profile, name, title, genre, bid, active, available_nfts, available_nfts_amt } = props.card
     let badgeText
 
     if (active){
@@ -26,6 +26,7 @@ export default function Card2(props){
                 {/* react icon */}
                 <p className="artist-name">{name}</p>
                 <p className="song--title">{title}</p>
+                <p className="genre">{genre}</p>
                 <div className="card-bottom">
                     <div className="card--price">
                         <p className="total-raised-header">Total Raised</p>
