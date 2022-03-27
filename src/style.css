@@ -107,7 +107,7 @@
 
 .cards {
   height: 690px;
-  padding: 100px 0;
+  padding: 60px 0;
   display: flex;
   gap: 40px;
   overflow-x: auto;
