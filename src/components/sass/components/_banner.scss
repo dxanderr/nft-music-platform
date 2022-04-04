@@ -1,0 +1,27 @@
+.banner-container{
+    margin: 80px 0;
+    padding: 40px 0;
+    display: flex;
+    align-items:center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    overflow-x: hidden;
+
+    .cell{
+        display: flex;
+        align-items: center;
+        flex: 1 0 auto;
+    }
+
+    .globe{
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    h2 {
+        font-size: 1em;
+        font-weight: 300;
+        color:white;
+        /* animation: animate 30s linear infinite; */
+    }
+}

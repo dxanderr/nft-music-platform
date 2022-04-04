@@ -1,0 +1,14 @@
+/* Navbar styles */
+/* See styled-components in Nav */
+/* Social media icons */
+.social svg{
+  margin: 0 5px;
+  font-size: 20px;
+  cursor: pointer;    
+}
+
+
+.social svg:hover{
+  padding-bottom: 4px;
+  border-bottom: 1px solid #06FFF0;  
+}

@@ -1,4 +1,3 @@
-import '../../style.css'
 import Hero from '../Hero'
 import Banner from '../Banner'
 import Info from '../Info'

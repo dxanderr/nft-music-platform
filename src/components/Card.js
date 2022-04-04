@@ -1,6 +1,5 @@
 import SingleCopy from '../images/cube.svg'
 import Active from '../images/active.svg'
-import '../style.css'
 
 export default function Card2(props){
     let { photo, profile, name, title, genre, bid, active, available_nfts, available_nfts_amt } = props.card

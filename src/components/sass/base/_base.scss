@@ -1,0 +1,86 @@
+:root {
+--primary: #06FFF0;
+--scrollbar-track: #0e0e0e;
+--scrollbar-thumb: #1d1f1e;
+--bg: #0c0c0c;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jura', 'Montserrat', Arial, Helvetica, sans-serif;
+  color: white;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);  
+}
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 1080px) {
+  .app-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Scrollbars
+::-webkit-scrollbar {
+  background-color: #111111;
+  width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+}
+
+// Mixins
+// sass map (500px, 800px, 1024px , 1400px ) 
+$breakpoints-up: ("medium": "31.25em", "medLarge":"50em", "large": "64em", "xlarge": "87.5em");
+
+
+// sass map ( 499px , 1023px , 1399px ) 
+$breakpoints-down: ("small":"31.1875em","medium": "63.9397em","medLarge":"50em",  "large":"87.4375em");
+
+@mixin breakpoint-up($size){
+    @media(min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size){
+    @media(max-width: map-get($breakpoints-down, $size)){
+        @content;
+    }
+}
+
+
+/* Page Layout */
+.marketplace-container,
+.about-container,
+.resources-container,
+.faq-container{
+  height: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+
+/* buttons */
+.buttons{
+  height: 60px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button{
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+
+
+/* Marketplace Styles */
+.marketplace-container{
+  padding-top: 100px;
+}

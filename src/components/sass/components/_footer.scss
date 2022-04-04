@@ -1,0 +1,126 @@
+/* Footer */
+.footer-container{
+  background: rgb(12,12,12);
+  background: linear-gradient(180deg, rgba(12,12,12,1) 0%, rgba(16,21,34,1) 35%);
+}
+
+.footer-wrap{
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.footer-links-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links-wrapper{
+  display: flex;
+}
+
+.footer-link-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+  color: #fff;  
+}
+
+.footer-links-title{
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.footer-link{
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+.footer-link:hover{
+  color: #01bF71;
+  transition: 0.3 ease-in-out;  
+}
+
+.social-media-container{
+  max-width: 1600px;
+  width: 100%;
+}
+
+.social-media-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto 0;  
+}
+
+.social-logo{
+  color: #fff;
+  justify-content: start;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: bold;  
+}
+
+.website-rights{
+  color: #fff;
+  margin-bottom: 16px;  
+  font-size: 14px;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.social-icon-link{
+  padding: 0 10px;
+  color: #fff;
+  font-size: 20px;  
+}
+
+/* Media Queries */
+@media screen and (max-width: 420px){
+  .footer-link-items{
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 968px){
+
+  /* Footer Tablet and Desktop Responsiveness */
+  .footer-wrap{
+    height: 440px;
+  }
+  .social{
+    display: none;
+  }
+  .footer-links-container{
+    padding-top: 32px;
+  }
+  .footer-links-wrapper{
+    flex-direction: column;
+  }  
+
+  .social-media-wrap{
+    flex-direction: column;
+  }
+
+}

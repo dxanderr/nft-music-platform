@@ -2,7 +2,8 @@ import {useState} from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Styling
-import "./style.css"
+// import "./style.css"
+import "./components/sass/index.scss"
 
 // Pages
 import Home from './components/pages/Home';
